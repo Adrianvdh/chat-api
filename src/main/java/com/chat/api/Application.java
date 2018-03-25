@@ -34,14 +34,14 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @NoArgsConstructor
-    @AllArgsConstructor
     @Data
     public class ChatMessage {
+        public ChatMessage() {
+        }
+
         private String from;
         private String body;
         private MessageType messageType;
-
     }
 
     public enum MessageType {
